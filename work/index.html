@@ -11,7 +11,7 @@
 <meta name="HandheldFriendly" content="True" />
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Blog of Urmila Nair, translator from French to English" />
+<meta name="description" content="Blog of Urmila Nair, translator from French/Tibetan to English" />
 <meta name="keywords" content="">
 
 
@@ -107,9 +107,13 @@ if (!doNotTrack) {
 
 <script>
   function toggle(lang) {
-    let tohide = lang === 'en' ? 'fr' : 'en';
-    document.getElementById(tohide).style.display = 'none';
-    document.getElementById(lang).style.display = 'block';
+    let divs = document.querySelectorAll('div[language]');
+    divs.forEach(function (div) {
+      if (div.getAttribute('language') == lang)
+        div.style.display = 'block';
+      else
+        div.style.display = 'none';
+    });
   }
 </script>
 
@@ -117,6 +121,7 @@ if (!doNotTrack) {
   
   <a class="gray" href="#" onclick="toggle('en');">en</a>
   | <a class="gray" href="#" onclick="toggle('fr');">fr</a>
+  | <a class="gray" href="#" onclick="toggle('tb');">tb</a>
   
 </div>
 
@@ -124,7 +129,7 @@ if (!doNotTrack) {
   <h1 itemprop="name" id="title">work</h1>
   <article itemprop="articleBody">
     <div class="markdown">
-      <div id="en">
+      <div language="en">
 <h4 id="contact-me-at">contact me at</h4>
 <a href="mailto:urmila@aropefastenedbetween.fr">urmila@aropefastenedbetween.fr</a>
 <h4 id="contact-me-for">contact me for</h4>
@@ -152,7 +157,7 @@ if (!doNotTrack) {
 <p>My rates for revision and proofreading depend on the quality of the English. The rates vary typically between €0.04 and €0.06/word for a well translated document.<br /></p>
 <p>Please contact me to discuss rates and timelines for website translation and subtitling.</p>
 </div>
-<div id="fr" style="display: none;">
+<div language="fr" style="display: none;">
 <h4 id="contactez-moi-à">contactez-moi à</h4>
 <a href="mailto:urmila@aropefastenedbetween.fr">urmila@aropefastenedbetween.fr</a>
 <h4 id="contactez-moi-pour">contactez-moi pour</h4>
@@ -180,7 +185,13 @@ if (!doNotTrack) {
 <p>Les tarifs de révision et relecture dépendent de la qualité de l&rsquo;anglais. Ils varient en général de 0,04 € à 0,06 €/mot.<br /></p>
 <p>Veuillez me contacter pour discuter des tarifs et des délais en cas de la traduction de sites Internet et du soustitrage de documentaires, de films.</p>
 </div>
-
+<div language="tb" style="display: none;">
+<h4 id="འབལགཏགཁབངན">འབྲེལ་གཏུག་ཁ་བྱང་ནི།</h4>
+<br/>
+<a href="mailto:urmila@aropefastenedbetween.fr">urmila@aropefastenedbetween.fr</a>
+<br/>
+<p>ནང་ཆོས་དང་ཆོ་གའི་དཔེ་ཆ་དང་བོད་མི་རིགས་ཀྱོ་སྐོར་རྩོམ་ཡིག་སོགས་དབྱིན་ཡིག་དུ་སྒྱུར་བའི་ལས་ཀ་ལག་ཏུ་ལེན་ནོ།</p>
+</div>
     </div>
   </article>
 </div>

@@ -11,7 +11,7 @@
 <meta name="HandheldFriendly" content="True" />
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Blog of Urmila Nair, translator from French to English" />
+<meta name="description" content="Blog of Urmila Nair, translator from French/Tibetan to English" />
 <meta name="keywords" content="">
 
 
@@ -107,9 +107,13 @@ if (!doNotTrack) {
 
 <script>
   function toggle(lang) {
-    let tohide = lang === 'en' ? 'fr' : 'en';
-    document.getElementById(tohide).style.display = 'none';
-    document.getElementById(lang).style.display = 'block';
+    let divs = document.querySelectorAll('div[language]');
+    divs.forEach(function (div) {
+      if (div.getAttribute('language') == lang)
+        div.style.display = 'block';
+      else
+        div.style.display = 'none';
+    });
   }
 </script>
 
@@ -117,6 +121,7 @@ if (!doNotTrack) {
   
   <a class="gray" href="#" onclick="toggle('en');">en</a>
   | <a class="gray" href="#" onclick="toggle('fr');">fr</a>
+  | <a class="gray" href="#" onclick="toggle('tb');">tb</a>
   
 </div>
 
@@ -124,7 +129,7 @@ if (!doNotTrack) {
   <h1 itemprop="name" id="title">about</h1>
   <article itemprop="articleBody">
     <div class="markdown">
-      <div id="en">
+      <div language="en">
 <h2 id="about-me">about me</h2>
 <img id="photo" src="/Urmila_Photo.jpg" />
 <p>I am a linguistic anthropologist and academic translator, currently living in
@@ -158,7 +163,7 @@ content once a fortnight under one of the three main rubrics, viz. <a href="/tra
 <li>discussions of translation problems and their resolution (for example, cases where the re-expression of an idea in English necessitates the omission of a concept mentioned in the French sentence).</li>
 </ul>
 </div>
-<div id="fr" style="display: none;">
+<div language="fr" style="display: none;">
 <h2 id="à-propos-de-moi">à propos de moi</h2>
 <img id="photo" src="/Urmila_Photo.jpg" />
 <p>Je suis anthropologue linguistique et
@@ -193,6 +198,19 @@ rubriques principales, à savoir <a href="/translations/">translations</a>,
 <li>des problèmes de traduction et leur résolution (par exemple, quand la réexpression d&rsquo;une idée en anglais nécessite l&rsquo;omission d&rsquo;un concept mentionné dans la phrase française).</li>
 </ul>
 </div>
+<div language="tb" style="display: none;">
+<h3 id="ངསད">ངོ་སྤྲོད།</h3>
+<img id="photo" src="/Urmila_Photo.jpg" />
+<p>ང་ནི་མི་རིགས་ཀྱི་རིགས་གཞུང་གི་སྐོར་ཉམས་ཞིབས་བྱེད་མཁན་ཡིན།མི་རིགས་ཀྱི་རིགས་གཞུང་དང་ནང་ཆོས་དང་ཆོ་གའི་དཔེ་ཆ་དང་དེའི་སྐོར་འགྲེལ་རྩོམ་རྣམས་French ཡིག་དང་བོད་ཡིག་ནས་དབྱིན་ཡིག་དུ་སྒྱུར་བའི་ལས་ཀ་བྱེད་ཀྱི་ཡོད།</p>
+<br/>
+<p>ཕྱི་ལོ་༢༠༡༠ ལ་ University of Chicago ནས་ PhD ཀྱི་སློབ་སྦྱོང་བྱས་ཚར་ཡིན།གནས་ཆུང་གི་བསྐང་གསོའི་སྐོར་ཉམས་ཞིབས་བྱས་པ་ཡིན། ཕྱི་ལོ་༢༠༡༠ ནས་༢༠༡༥ བར་ Johns Hopkins University དང་ University of Cambridge ལ་ལས་ཀ་བྱས་ནས་ཕྱི་ལོ་ ༢༠༡༥ France ལ་སྤོས་པ་ཡིན།</p>
+<br/>
+<p>Paris གྲོང་འཁྱེར་གྱི ESIT (<em>École supérieure d’interprètes et de traducteurs</em>) སློབ་གྭ་ཆེན་མོར་སློབ་སྦྱོང་བྱས་ནས་སྒྱུར་མཁན་གྱི་ལས་ཀ་འགོ་བཙུགས་པ་ཡིན།</p>
+<br/>
+<p>CNRS གྱི་ <a href="https://lacito.cnrs.fr/pratique/structure_admin_en.htm#associes">LACITO</a> (<em>Langues et Civilisations à tradition orale</em>) ཅེས་བྱ་བའི་ཉམས་ཞིབས་ཁང་དང་ <a href="https://www.atessfrance.org/membres">ATESS</a> (<em>Association des Traducteurs et Éditeurs en Sciences Sociales</em>) སྒྱུར་མཁན་གྱི་ཚོགས་པ་དང་འབྲེལ་བ་ཡོད།</p>
+<br/>
+<h3 id="དཚགསའདའསར">དྭ་ཚིགས་འདིའི་སྐོར།</h3>
+<p>དྭ་ཚིགས་འདིར་ངའི་སྒྱུར་སྒྲ་དང་རྩོམ་སྣ་ཚོགས་བཀོད་ཡོད།</p>
 
     </div>
   </article>
